@@ -27,6 +27,9 @@
   The results are stored, and used to create a SVG file which you can open, and view in your default browser.<br>
   Results are confirm via 
   >console.log()
+  >
+  A video displaying functionality can be found here:<br>
+  "URL LINK"
 
   ## Contributing
   Please create your own local branch.<br>
