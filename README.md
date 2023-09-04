@@ -17,7 +17,7 @@
   Clone to local repository, run ```git i``` to update packages, then run ```node index.js``` to operate.
 
   ## Usage
-  Coming Soon
+  Enter your desired parameters when prompted by the program.
 
   ## Contributing
   Create local branch, and push to new branch on github. Await merge to main.
@@ -29,7 +29,7 @@
   If you have any questions, feel free to reach out via email or GitHub.
 
   ## License
-  This Project is licenced under the MIT License License.
+ None.
 
   ## Contact
   Email: brochbaltzer@gmail.com
