@@ -37,18 +37,27 @@ inquirer
         }
     ])
 
-// Takes the answers, console logs them to confirm accuracy for the user, and creates an SVG file using the answers.
+    // Takes the answers, console logs them to confirm accuracy for the user, and creates an SVG file using the answers.
     .then((answers) => {
         console.log('User input:', answers);
-        const logo = 'logo'
+        const logo = 'logo';
         const filename = `${logo}.svg`;
+        const width = 300;
+        const height = 200;
+        const text = answers.threechar;
+        const textcolor = answers.textcolor;
+        const shape = answers.shape;
+        const shapecolor = answers.shapecolor
 
-        fs.writeFile(filename, JSON.stringify(answers, null, '/t'), (err) =>
-            err ? console.log(err) : console.log('Success!')
-            )
+        const svgMarkup = `<svg width="${width}" height="${height}"></svg>`;how 
+
+        fs.writeFile(filename, svgMarkup, (err) => {
+            err ? console.log(err) : console.log('SVG fiel created sucessfully!')
+
+        })
     })
 
-// Error catch
+    // Error catch
     .catch((error) => {
         console.error('Error occurred:', error);
     });
