@@ -14,13 +14,23 @@
   - [Contact](#contact)
 
   ## Installation
-  Clone to local repository, run ```git i``` to update packages, then run ```node index.js``` to operate.
+  Clone to local repository, run 
+  >git i
+  >
+  to update packages. Next run 
+  >node index.js
+  >
+  to operate.
 
   ## Usage
-  Enter your desired parameters when prompted by the program.
+  Enter your desired parameters when prompted by the program.<br><br>
+  The results are stored, and used to create a SVG file which you can open, and view in your default browser.<br>
+  Results are confirm via 
+  >console.log()
 
   ## Contributing
-  Create local branch, and push to new branch on github. Await merge to main.
+  Please create your own local branch.<br>
+  Once you have made changes, please push to your own branch to github, and await merge to main by admin.
 
   ## Tests
   Coming Soon
