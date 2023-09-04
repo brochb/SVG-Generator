@@ -1,4 +1,5 @@
 const inquirer = require('inquirer')
+const fs = require('fs')
 
 // Initialize program with prompts when user runs CLI.
 // Takes user prompts, and creates answers from which the SVG file will be created. (promise)
@@ -35,7 +36,17 @@ inquirer
             }
         }
     ])
+
 // Takes the answers, console logs them to confirm accuracy for the user, and creates an SVG file using the answers.
+    .then((answers) => {
+        console.log('User input:', answers);
+        const logo = 'logo'
+        const filename = `${logo}.svg`;
+
+        fs.writeFile(filename, JSON.stringify(answers, null, '/t'), (err) =>
+            err ? console.log(err) : console.log('Success!')
+            )
+    })
 
 // Error catch
     .catch((error) => {
