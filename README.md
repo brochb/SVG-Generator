@@ -3,7 +3,8 @@
 
   ## Description
   This application will create a simple SVG image for you scalable up to 3 characters.<br>
-  [![An example SVG file](/assets/images/generatorLogo.svg)]
+  Here is an example of a type of SVG file you could make:<br>
+  ![Example SVG file](/Assets//Images/image.png)
 
 
   ## Table of Contents
