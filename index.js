@@ -23,7 +23,7 @@ inquirer
         },
         {
             type: 'list',
-            message: 'Would you like a circle, triangle, or square?',
+            message: 'Would you like a circle, triangle(polygon), or square?',
             name: 'shape',
             choices: ['circle', 'polygon', 'square']
         },
@@ -48,11 +48,19 @@ inquirer
         const shape = answers.shape;
         const shapecolor = answers.shapecolor;
 
-        const svgMarkup = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100%" height="100%" fill="white" />
-    <${shape} cx="150" cy="100" r="80" fill="${shapecolor}" />
-    <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${upperThreechar}</text>
-  </svg>`;
+        let svgMarkup = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white" />`;
+
+        if (shape === 'circle') {
+            svgMarkup += `<circle cx="150" cy="100" r="80" fill="${shapecolor}" />`;
+        } else if (shape === 'polygon') {
+            svgMarkup += `<polygon points="150,20 260,180 50,180" fill="${shapecolor}" />`;
+        } else if (shape === 'square') {
+            svgMarkup += `<rect x="60" y="60" width="180" height="180" fill="${shapecolor}" />`;
+        }
+
+        svgMarkup += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${threechar}</text>
+</svg>`;
 
         fs.writeFile(filename, svgMarkup, (err) => {
             if (err) {
