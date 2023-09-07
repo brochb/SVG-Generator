@@ -23,9 +23,9 @@ inquirer
         },
         {
             type: 'list',
-            message: 'What shape would you like to border the text?',
+            message: 'Would you like a circle, triangle, or square?',
             name: 'shape',
-            choices: ['circle', 'triangle', 'square']
+            choices: ['circle', 'polygon', 'square']
         },
         {
             type: 'input',
@@ -42,18 +42,24 @@ inquirer
         console.log('User input:', answers);
         const logo = 'logo';
         const filename = `${logo}.svg`;
-        const width = 300;
-        const height = 200;
-        const text = answers.threechar;
+        const threechar = answers.threechar;
+        const upperThreechar = threechar.toUpperCase();
         const textcolor = answers.textcolor;
         const shape = answers.shape;
-        const shapecolor = answers.shapecolor
+        const shapecolor = answers.shapecolor;
 
-        const svgMarkup = `<svg width="${width}" height="${height}"></svg>`;how 
+        const svgMarkup = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="white" />
+    <${shape} cx="150" cy="100" r="80" fill="${shapecolor}" />
+    <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${upperThreechar}</text>
+  </svg>`;
 
         fs.writeFile(filename, svgMarkup, (err) => {
-            err ? console.log(err) : console.log('SVG fiel created sucessfully!')
-
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('SVG file created successfully!');
+            }
         })
     })
 

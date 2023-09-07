@@ -3,6 +3,8 @@
 
   ## Description
   This application will create a simple SVG image for you scalable up to 3 characters.
+  [![A mushroom-head robot](/assets/images/generatorLogo.svg 'Codey the Codecademy mascot')](https://codecademy.com)
+
 
   ## Table of Contents
   - [Installation](#installation)
