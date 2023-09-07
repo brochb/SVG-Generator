@@ -32,7 +32,7 @@
   >console.log()
   >
   A video displaying functionality can be found here:<br>
-  "URL LINK"
+  "https://drive.google.com/file/d/1s8qZ7I_APkUvOoPfWpekJ5FfBgL76vxQ/view"
 
   ## Contributing
   Please create your own local branch.<br>
