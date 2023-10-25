@@ -59,7 +59,7 @@ inquirer
             svgMarkup += `<rect x="60" y="60" width="180" height="180" fill="${shapecolor}" />`;
         }
 
-        svgMarkup += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${threechar}</text>
+        svgMarkup += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${upperThreechar}</text>
 </svg>`;
 
         fs.writeFile(filename, svgMarkup, (err) => {
@@ -75,3 +75,5 @@ inquirer
     .catch((error) => {
         console.error('Error occurred:', error);
     });
+
+    // module.exports = //function name

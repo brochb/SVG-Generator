@@ -1,0 +1,1 @@
+const binarySearch = require('../index');

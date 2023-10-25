@@ -39,7 +39,11 @@
   Once you have made changes, please push to your own branch to github, and await merge to main by admin.
 
   ## Tests
-  Coming Soon
+  To confirm tests are functioning proplerly run...<br>
+  >npm run test
+  >
+  <br>
+  A normal test suite will run, and display whether or not the tests have passed or failed. Scroll up in the console to see test details.
 
   ## Questions
   If you have any questions, feel free to reach out via email or GitHub.
