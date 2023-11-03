@@ -48,8 +48,7 @@ inquirer
         const shape = answers.shape;
         const shapecolor = answers.shapecolor;
 
-        let svgMarkup = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="white" />`;
+        let svgMarkup = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white" />`;
 
         if (shape === 'circle') {
             svgMarkup += `<circle cx="150" cy="100" r="80" fill="${shapecolor}" />`;
@@ -59,8 +58,7 @@ inquirer
             svgMarkup += `<rect x="60" y="60" width="180" height="180" fill="${shapecolor}" />`;
         }
 
-        svgMarkup += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${upperThreechar}</text>
-</svg>`;
+        svgMarkup += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textcolor}">${upperThreechar}</text></svg>`;
 
         fs.writeFile(filename, svgMarkup, (err) => {
             if (err) {
@@ -70,10 +68,6 @@ inquirer
             }
         })
     })
-
-    // Error catch
     .catch((error) => {
         console.error('Error occurred:', error);
-    });
-
-    // module.exports = //function name
+});
